@@ -1,7 +1,7 @@
 
-# StoryVideoGenerator
+# VideoGen
 
-**StoryVideoGenerator** is an NPM module that transforms a textual prompt into a complete video story. It utilizes AI for generating narratives, fetches relevant video clips, generates synthesized audio, and adds subtitles, producing a final, polished video.
+**VideoGen** is an NPM module that transforms a textual prompt into a complete video story. It utilizes AI for generating narratives, fetches relevant video clips, generates synthesized audio, and adds subtitles, producing a final, polished video.
 
 ## Features
 

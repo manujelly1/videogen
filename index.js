@@ -1,14 +1,14 @@
-const {extractKeywordsFromStory} = require("./utils/extractKeywords");
+const {extractKeywordsFromStory} = require("./src/utils/extractKeywords");
 const path = require('path')
-const {videoProcess} = require("./utils/videoProcess");
-const {generateTTS, getAudioDuration} = require("./audio/generateAudio");
-const {whisperTranscribe} = require("./api/whisper");
-const {writeSrtFile} = require("./utils/WhisperProcessor");
-const {mergeAudioWithVideo} = require("./audio/generateAudio");
-const {getStoryFromPrompt} = require("./utils/getStoryFromPrompt");
+const {videoProcess} = require("./src/utils/videoProcess");
+const {generateTTS, getAudioDuration} = require("./src/audio/generateAudio");
+const {whisperTranscribe} = require("./src/api/whisper");
+const {writeSrtFile} = require("./src/utils/WhisperProcessor");
+const {mergeAudioWithVideo} = require("./src/audio/generateAudio");
+const {getStoryFromPrompt} = require("./src/utils/getStoryFromPrompt");
 const fs = require("fs");
-const {addSubtitlesToVideo} = require("./utils/videoManage");
-const {checkEnvironmentVariables} = require("./utils/common");
+const {addSubtitlesToVideo} = require("./src/utils/videoManage");
+const {checkEnvironmentVariables} = require("./src/utils/common");
 
 global.workdir = process.env.OUTPUT_DIRECTORY;
 

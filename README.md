@@ -34,7 +34,7 @@ OUTPUT_DIRECTORY=
 ## Usage
 
 ```javascript
-const { videogen } = require("videogen/src");
+const { videogen } = require("videogen");
 
 videogen({ prompt: "Football and its history", hasSubtitle: true, orientation: "portrait" })
 .then(res => console.log(res)) //res is the final computed video path

@@ -6,3 +6,4 @@ sa.json
 package-lock.json
 start.sh
 produce/**/*
+test.js

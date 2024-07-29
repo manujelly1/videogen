@@ -60,8 +60,6 @@ function checkEnvironmentVariables(){
         throw new Error("OPENAI_MODEL is not defined. Please create an .env file and set this variable ")
     } else if (!process.env.PEXEL_API_KEY) {
         throw new Error("PEXEL_API_KEY is not defined. Please create an .env file and set this variable ")
-    } else if (!process.env.GOOGLE_APPLICATION_CREDENTIALS){
-        throw new Error("GOOGLE_APPLICATION_CREDENTIALS is not defined. Please create an .env file and set this variable ")
     } else if (!process.env.OPENAI_TRANSCRIPTION_MODEL){
         throw new Error("OPENAI_TRANSCRIPTION_MODEL is not defined. Please create an .env file and set this variable ")
     } else if (!process.env.OUTPUT_DIRECTORY){

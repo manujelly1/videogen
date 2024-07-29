@@ -36,6 +36,7 @@ async function VideoGen({prompt = "", hasSubtitle= true, orientation = "landscap
     console.log('Start Generate History From Prompt')
     const story = await getStoryFromPrompt(prompt);
     const parsedScript = JSON.parse(story).script
+    const mainKeyword = JSON.parse(story).key_keyword
 
     console.log('Start Generate TTS Audio...')
     await generateTTS(parsedScript, ttsAudioPath);
@@ -58,7 +59,7 @@ async function VideoGen({prompt = "", hasSubtitle= true, orientation = "landscap
     }
 
     console.log('Start Video Process...')
-    await videoProcess(segments, finalVideoPath, finalVideoNoAudioPath,orientation)
+    await videoProcess(segments, finalVideoPath, finalVideoNoAudioPath, orientation, mainKeyword)
     //Remove Final Video NoAudioPath
     fs.rmSync(finalVideoPath, {force: true, recursive: true})
 

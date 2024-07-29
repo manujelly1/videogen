@@ -39,7 +39,7 @@ function trimVideo(inputPath, outputPath, startTime, duration, fps = 25) {
 
 
 function combineVideos(videoPaths, outputPath) {
-    const fileListPath = path.join(__dirname, 'video-list.txt');
+    const fileListPath = path.join(workdir, 'video-list.txt');
     const fileListContent = videoPaths.map(p => `file '${p}'`).join('\n');
 
     fs.writeFileSync(fileListPath, fileListContent);

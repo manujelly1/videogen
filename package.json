@@ -1,6 +1,6 @@
 {
   "name": "videogen",
-  "version": "1.0.6",
+  "version": "1.1.0",
   "description": "Generate Short Video With OpenAI",
   "main": "index.js",
   "scripts": {

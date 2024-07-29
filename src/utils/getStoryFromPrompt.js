@@ -6,9 +6,10 @@ async function getStoryFromPrompt(user_prompt) {
   You will produce purely text.
   Don't write any other textual thing than the text itself.
   Make sure the text is not longer than 200 words (keep the video pretty short and neat).
+  key_keyworks must be principal keyword of story. Must be unique and single word and and must be as close as possible to the story.
   # Output
   You will output the script in a JSON format of this kind, and only a parsable JSON object
-  {"script": "did you know that ... ?"}`;
+  {"script": "did you know that ... ?", "key_keyword": "KEYWORD"}`;
 
     return chatGpt(user_prompt, system_prompt);
 

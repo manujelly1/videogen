@@ -5,7 +5,7 @@ const fs = require('fs');
 const path = require('path');
 
 // Creates a client
-const client = new textToSpeech.TextToSpeechClient({keyFilename: process.env.GOOGLE_APPLICATION_CREDENTIALS});
+const client = new textToSpeech.TextToSpeechClient({});
 
 /**
  * Converts text to speech and saves it as an audio file.

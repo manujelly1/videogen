@@ -6,8 +6,8 @@ const {cleanUpTemporaryFiles, randomString} = require("./common");
 const {removeAudio} = require("../audio/generateAudio");
 
 
-async function videoProcess (segments, finalVideoPath, finalVideoNoAudioPath, orientation){
-    const videosPerSegment = await fetchVideosForStorySegments(segments, orientation);
+async function videoProcess (segments, finalVideoPath, finalVideoNoAudioPath, orientation, mainKeyword){
+    const videosPerSegment = await fetchVideosForStorySegments(segments, orientation, mainKeyword);
 
     for (const segment of videosPerSegment) {
         const [startTime, endTime] = segment.timeRange;

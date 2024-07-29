@@ -11,7 +11,7 @@ function getRandomKeyword() {
     return randomKeywords[Math.floor(Math.random() * randomKeywords.length)];
 }
 
-async function fetchVideosForStorySegments(segments, orientation) {
+async function fetchVideosForStorySegments(segments, orientation, mainKeyword) {
     let videosPerSegment = [];
 
     for (const segment of segments) {
@@ -32,8 +32,12 @@ async function fetchVideosForStorySegments(segments, orientation) {
                 // If no videos are found, perform a random search
                 if (videos.length === 0) {
                     console.log(`No videos found for keyword "${keyword}". Performing a random search.`);
-                    const randomKeyword = getRandomKeyword();
-                    videos = await searchVideos(randomKeyword, 8, orientation);
+                    videos = await searchVideos(mainKeyword, 8, orientation);
+                    if (videos.length === 0){
+                        console.log("Nothing found with main keyword. Start search with random")
+                        const randomKeyword = getRandomKeyword();
+                        videos = await searchVideos(randomKeyword, 8, orientation);
+                    }
                 }
                 // Add found videos to the segment's results
                 segmentVideos.push({
